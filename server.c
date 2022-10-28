@@ -65,6 +65,10 @@ int main(int argc , char *argv[])
 		//Reply to the client
 		message = "Hello socket\n";
 		send(new_socket , message , strlen(message) , 0);
+		write(new_socket, "HTTP/1.1 200 OK\n", 16);
+		write(new_socket, "Content-length: 46\n", 19);
+		write(new_socket, "Content-Type: text/html\n\n", 25);
+		write(new_socket, "<html><body><H1>Hello world</H1></body></html>",46);
 	}
 	
 	if (new_socket == INVALID_SOCKET)
