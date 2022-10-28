@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "direct.h": "c",
+        "stddef.h": "c"
+    }
+}
