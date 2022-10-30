@@ -2,12 +2,32 @@
 
 <html>
   <head>
-    <title>Funciona La Pagina</title>
+    <title>La Pagina Funciona</title>
   </head>
 
   <body>
-    <h1>PAgina 1</h1>
+    <h1>Titulo de la pagina</h1>
 
-    Esta es  la Pagina.
+    <form action="/action_page.php">
+      <label for="fname">Su nombre completo:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <input type="button" id="btn"value="Submit">
+    </form>
+    <p class="output" id="output1"></p>
+
+    <script>
+      const txt1 = document.getElementById('fname');
+      const btn1 = document.getElementById('btn');
+      const out1 = document.getElementById('output1');
+
+      function fun1(){
+        out1.innerHTML=txt1.value;
+      }
+
+      btn1.addEventListener('click',fun1)
+    
+    </script>
+
+
   </body>
 </html>
